@@ -1,0 +1,2 @@
+# SpotyAPP
+Project Angular
