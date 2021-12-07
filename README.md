@@ -78,15 +78,22 @@ Para instalar Bootstrap se requieren las dependencias de JQUERY y de PopperJS:
 npm i bootstrap jquery @popperjs/core --save
 ```
 
+* #### Instalación de Bootswatch -> Temas
+Para instalar Bootswatch librería de temas de bootstrap basta solamente con:
+
+```bash
+npm i bootswatch --save
+```
+
 * #### Instalación de FontAwesome -> Iconos
 Para instalar fontawesome basta con la siguiente linea de comando:
 
 ```bash
-npm install @fortawesome/fontawesome-free --save
+npm i @fortawesome/fontawesome-free --save
 ```
 
 ```bash
-npm install @fortawesome/angular-fontawesome --save 
+npm i @fortawesome/angular-fontawesome --save 
 ```
 
 * #### Instalación Firebase
@@ -94,14 +101,14 @@ npm install @fortawesome/angular-fontawesome --save
 Para instalar Firebase basta con la siguiente línea:
 
 ```bash
-npm install firebase @angular/fire --save
+npm i firebase @angular/fire --save
 ```
 
 * #### Instalación de NGX-TOASTR -> Notificaciones
 Para instalar Toastr, se requiere de la siguiente linea de comando:
 
 ```bash
-npm install ngx-toastr --save
+npm i ngx-toastr --save
 ```
 Junto con la instalación del siguiente paquete, el cual ayuda a la funcionalidad del TOASTR.
 
@@ -112,11 +119,11 @@ npm i @angular/animations --save
 * #### Instalación de Datatables -> Visualizar en tablas info
 
 ```bash
-npm install datatables.net --save
-npm install datatables.net-dt --save
-npm install angular-datatables --save
-npm install @types/jquery --save-dev
-npm install @types/datatables.net --save-dev
+npm i datatables.net --save
+npm i datatables.net-dt --save
+npm i angular-datatables --save
+npm i @types/jquery --save-dev
+npm i @types/datatables.net --save-dev
 ```
 
 ### Llamar o Vincular las dependencias instaladas en el proyecto
