@@ -71,22 +71,30 @@ Para instalar firebase solamente se debe ejecutar el siguiente comando:
 npm i @angular/fire --save
 ```
 
-* #### Instalación de Boostrap -> Estilos
-Para instalar boostrap se requieren las dependencias de JQUERY y de PopperJS:
+* #### Instalación de Bootstrap -> Estilos
+Para instalar Bootstrap se requieren las dependencias de JQUERY y de PopperJS:
 
 ```bash
-npm i boostrap jquery @popperjs/core --save
+npm i bootstrap jquery @popperjs/core --save
 ```
 
 * #### Instalación de FontAwesome -> Iconos
 Para instalar fontawesome basta con la siguiente linea de comando:
 
 ```bash
-npm install --save @fortawesome/fontawesome-free --save
+npm install @fortawesome/fontawesome-free --save
 ```
 
 ```bash
 npm install @fortawesome/angular-fontawesome --save 
+```
+
+* #### Instalación Firebase
+
+Para instalar Firebase basta con la siguiente línea:
+
+```bash
+npm install firebase @angular/fire --save
 ```
 
 * #### Instalación de NGX-TOASTR -> Notificaciones
