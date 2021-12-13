@@ -20,6 +20,10 @@ Carpeta donde se encuentra el proyecto de clase de Angular.
          │  └─ Shared
          │     ├─ footer
          │     └─ nav-bar
+         ├─ Guards
+         │  └─ Auth
+         ├─ Interceptors
+         │  └─ Auth
          ├─ Interfaces
          ├─ Pages
          │  ├─ Home
