@@ -34,7 +34,7 @@ export class AuthService {
   }
 
   // Method for logout with Google
-  public LogoutGoogle(){
+  public Logout(){
     this._User = {} as IUser;
     return this._AFAuth.signOut();
   }

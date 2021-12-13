@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { IUser } from 'src/app/Interfaces/User.interface';
 import { AuthService } from 'src/app/Services/Auth/auth.service';
 
@@ -14,7 +15,8 @@ export class NavBarComponent implements OnInit {
   public _User = {} as IUser;
 
   constructor(private _authService: AuthService,
-    private _router: Router) { 
+    private _router: Router,
+    private _toastr: ToastrService) { 
     this._User = _authService._User;
   }
 
@@ -22,8 +24,12 @@ export class NavBarComponent implements OnInit {
   }
 
   public Logout(){
-    this._authService.LogoutGoogle();
-    this._router.navigate(['/user/login']);
+    this._authService.Logout().then(
+      () =>{
+        this._toastr.info('You are logging out...', 'SpotyAPP');
+        this._router.navigate(['/user/login']);
+      }
+    );
   }
 
 }
