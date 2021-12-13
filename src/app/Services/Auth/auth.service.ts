@@ -13,17 +13,31 @@ export class AuthService {
   public _User: IUser = {} as IUser;
 
   constructor(private _AFAuth: AngularFireAuth) { 
-    _AFAuth.authState.subscribe(
-      user =>{
-        if(!user){
-          return;
-        }
+    this.getUser();
+  }
 
-        this._User.UId = user.uid;
-        this._User.Name = user.displayName;
-        this._User.Email = user.email;
+  // Get User
+  private async getUser() {
+    return this._AFAuth.authState.subscribe(async user => {
+      if (!user) {
+        return;
       }
-    );
+      this._User.UId = user.uid;
+      this._User.Name = user.displayName;
+      this._User.Email = user.email;
+      let token = await user.getIdToken();
+      sessionStorage.setItem('token', token);
+    })
+  }
+
+  // Method for know Logged in the system
+  public isLogged() {
+    return this._User ? true : false;
+  }
+
+  // Method for know EmptyObject
+  public isEmptyObject(obj: any) {
+    return Object.getOwnPropertyNames(obj).length === 0;
   }
 
   // Method for login with Google
@@ -36,6 +50,7 @@ export class AuthService {
   // Method for logout with Google
   public Logout(){
     this._User = {} as IUser;
+    sessionStorage.removeItem('token');
     return this._AFAuth.signOut();
   }
 

@@ -27,7 +27,7 @@ export class NavBarComponent implements OnInit {
     this._authService.Logout().then(
       () =>{
         this._toastr.info('You are logging out...', 'SpotyAPP');
-        this._router.navigate(['/user/login']);
+        this._router.navigate(['user/login']);
       }
     );
   }

@@ -23,8 +23,5 @@ import { AuthService } from 'src/app/Services/Auth/auth.service';
   providers:[
     AuthService
   ],
-  exports:[
-    HomeComponent
-  ]
 })
 export class HomeModule { }

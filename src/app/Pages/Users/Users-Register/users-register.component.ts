@@ -71,7 +71,7 @@ export class UsersRegisterComponent implements OnInit {
     this._authService.registerByEmail(this._UserAuth)
     .then(() =>{
       this._toastr.success('The User successfully registered...', 'SpotyAPP');
-      this._router.navigate(['/user/login']);
+      this._router.navigate(['user/login']);
     })
     .catch(_error =>{
       this._toastr.error(`An error has occurred: ${_error}`, "Error");
