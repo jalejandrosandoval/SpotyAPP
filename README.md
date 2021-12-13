@@ -16,6 +16,18 @@ Carpeta donde se encuentra el proyecto de clase de Angular.
    ├─ node_modules 
    └─ src => Carpeta Principal
       └─ app
+         ├─ Components
+         │  └─ Shared
+         │     ├─ footer
+         │     └─ nav-bar
+         ├─ Interfaces
+         ├─ Pages
+         │  ├─ Home
+         │  └─ Users
+         │     ├─ Users-Login
+         │     └─ Users-Register
+         └─ Services
+            └─ Auth
 ```
 
 ## Requisitos Previos Para Angular
