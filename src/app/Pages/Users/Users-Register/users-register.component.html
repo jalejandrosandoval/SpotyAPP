@@ -1,15 +1,11 @@
-<form [formGroup]="_LoginForm" (ngSubmit)="onLogin()">
+<form [formGroup]="_RegisterForm" (ngSubmit)="onRegister()">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-xl-10 col-lg-12 col-md-8">
+            <div class="col-xl-5 col-lg-6 col-md-6">
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
                         <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block pt-3">
-                                <img src="../../../../assets/img/bg_login.png" class="img-fluid mx-auto d-block mt-4"
-                                    alt="Responsive image" />
-                            </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-12">
                                 <div class="p-5">
                                     <div class="d-sm-flex align-items-center justify-content-center mb-4">
                                         <h2 class="text-center h3 mb-0 text-gray-800">
@@ -20,9 +16,9 @@
                                     </div>
                                     <hr />
                                     <h6 class="h6 mb-0 text-center">
-                                        <p class="text-center">Ingrese sus Datos de Acesso</p>
+                                        <p class="text-center">Formulario de Registro...</p>
                                     </h6>
-                                    <small class="m-0 font-weight-bold text-danger" *ngIf="gLoginFormValid">
+                                    <small class="m-0 font-weight-bold text-danger" *ngIf="gRegisterFormValid">
                                         <i class="fas fa-info-circle"> </i> The Field with (*) are required...
                                     </small>
                                     <div class="input-group mb-2 m-0 row">
@@ -41,38 +37,18 @@
                                             <b>* Field Required: </b> Password Required!
                                         </small>
                                     </div>
-                                    <div class="form-group">
-                                        <div class="custom-control custom-checkbox small">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck"
-                                                title="Mantener Sesión Iniciada">
-                                            <label class="custom-control-label" for="customCheck"> Mantener Sesión
-                                                Iniciada </label>
-                                        </div>
-                                    </div>
                                     <br />
                                     <div class="text-center">
                                         <button type="submit" value="Login" class="btn btn-warning btn-user btn-block"
-                                            [disabled]="_LoginForm.invalid" title="Ingresar al Sistema">
-                                            Ingresar
+                                            [disabled]="_RegisterForm.invalid" title="Registrar al Sistema">
+                                            Registrame
                                         </button>
                                     </div>
                                     <hr />
                                     <div class="text-center">
-                                        <button class="btn btn-link btn-user " style="text-decoration:none"
-                                            routerLink="/user/login" title="Recordar Contraseña">
-                                            <b> Recordar Contraseña </b>
-                                        </button>
-                                        |
-                                        <button class="btn btn-link btn-user" style="text-decoration:none"
-                                            (click)="onRegister()" title="Registrarse">
-                                            <b> Registrarse </b>
-                                        </button>
-                                    </div>
-                                    <hr />
-                                    <div class="text-center">
-                                        <button type="button" value="Login" class="btn btn-success btn-user"
-                                            title="Ingresar al Sistema Por Google" (click)="LoginAuth()">
-                                            <i class="fab fa-google"></i> Iniciar Sesión con Google
+                                        <button type="button" value="Login" class="btn btn-info btn-user btn-block"
+                                            title="Iniciar Sesión" routerLink="/user/ m-0login">
+                                            <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
                                         </button>
                                     </div>
                                 </div>

@@ -22,9 +22,8 @@ export class NavBarComponent implements OnInit {
   }
 
   public Logout(){
-    this._authService.Logout();
-    this._router.navigate(['/login']);
+    this._authService.LogoutGoogle();
+    this._router.navigate(['/user/login']);
   }
-
 
 }

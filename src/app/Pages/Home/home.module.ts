@@ -6,6 +6,7 @@ import { NavBarModule } from 'src/app/Components/Shared/nav-bar/nav-bar.module';
 import { UsersModule } from '../Users/users.module';
 import { FooterModule } from 'src/app/Components/Shared/footer/footer.module';
 import { HomeComponent } from './home.component';
+import { AuthService } from 'src/app/Services/Auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -19,8 +20,11 @@ import { HomeComponent } from './home.component';
     UsersModule,
     FooterModule
   ],
+  providers:[
+    AuthService
+  ],
   exports:[
-      HomeComponent
+    HomeComponent
   ]
 })
 export class HomeModule { }
