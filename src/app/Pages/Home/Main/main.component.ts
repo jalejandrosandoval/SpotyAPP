@@ -17,7 +17,6 @@ export class MainComponent implements OnInit {
   private getReleases(){
     this._spotifyService.getNewReleases().subscribe(
       (data: any)=>{
-        console.log("Data Main: ");
         console.log(data);
       }
     );

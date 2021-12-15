@@ -82,7 +82,6 @@ export class AuthService {
       .pipe(map((data: any) => data))
       .subscribe(data => {
         sessionStorage.setItem('token', data?.access_token);
-        console.log("Data PostToken:" + data);
       }
     );
   }
