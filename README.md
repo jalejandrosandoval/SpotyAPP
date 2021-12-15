@@ -19,6 +19,7 @@ Carpeta donde se encuentra el proyecto de clase de Angular.
          ├─ Components
          │  └─ Shared
          │     ├─ footer
+         │     ├─ loading
          │     └─ nav-bar
          ├─ Guards
          │  └─ Auth
@@ -27,6 +28,11 @@ Carpeta donde se encuentra el proyecto de clase de Angular.
          ├─ Interfaces
          ├─ Pages
          │  ├─ Home
+         │  │  ├─ Artist
+         │  │  ├─ Cards
+         │  │  ├─ Home
+         │  │  ├─ Main
+         │  │  └─ Search
          │  └─ Users
          │     ├─ Users-Login
          │     └─ Users-Register
