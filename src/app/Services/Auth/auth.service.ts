@@ -72,13 +72,13 @@ export class AuthService {
   public postTokenSpotify() {
 
     let _body = new URLSearchParams();
-    _body.set('grant_type', environment.Credentials_Spotify.Grand_Type);
-    _body.set('client_id', environment.Credentials_Spotify.Client_Id);
-    _body.set('client_secret', environment.Credentials_Spotify.Client_Secret);
+    _body.set('grant_type', environment.Spotify.Grand_Type);
+    _body.set('client_id', environment.Spotify.Client_Id);
+    _body.set('client_secret', environment.Spotify.Client_Secret);
 
     let headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
 
-    return this._httpClient.post(environment.URL_Spotify_Token, _body.toString(), { headers })
+    return this._httpClient.post(environment.Spotify.URL.URL_Spotify_Token, _body.toString(), { headers })
       .pipe(map((data: any) => data))
       .subscribe(data => {
         sessionStorage.setItem('token', data?.access_token);

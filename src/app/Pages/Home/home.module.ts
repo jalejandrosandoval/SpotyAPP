@@ -3,14 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { NavBarModule } from 'src/app/Components/Shared/nav-bar/nav-bar.module';
-import { UsersModule } from '../../Users/users.module';
+import { UsersModule } from '../Users/users.module';
 import { FooterModule } from 'src/app/Components/Shared/footer/footer.module';
-import { HomeComponent } from './home.component';
+import { HomeComponent } from './Home/home.component';
 import { AuthService } from 'src/app/Services/Auth/auth.service';
-import { ArtistComponent } from '../Artist/artist.component';
-import { CardsComponent } from '../Cards/cards.component';
-import { MainComponent } from '../Main/main.component';
-import { SearchComponent } from '../Search/search.component';
+import { ArtistComponent } from './Artist/artist.component';
+import { CardsComponent } from './Cards/cards.component';
+import { MainComponent } from './Main/main.component';
+import { SearchComponent } from './Search/search.component';
 import { SpotifyService } from 'src/app/Services/Spotify/spotify.service';
 import { AuthInterceptor } from 'src/app/Interceptors/Auth/auth.interceptor';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -21,7 +21,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     ArtistComponent,
     CardsComponent,
     MainComponent,
-    SearchComponent    
+    SearchComponent
   ],
   imports: [
     CommonModule,
@@ -32,7 +32,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     UsersModule,
     FooterModule
   ],
-  providers:[
+  providers: [
     AuthService,
     SpotifyService,
     {

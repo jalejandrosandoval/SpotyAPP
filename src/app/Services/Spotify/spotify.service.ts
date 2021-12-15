@@ -12,7 +12,7 @@ export class SpotifyService {
 
   // Method for get the Query
   private getQuery(_Query: string){
-    let _url = `${environment.API_URL_Spotify}${_Query}`;
+    let _url = `${environment.Spotify.URL.API_URL_Spotify}${_Query}`;
     return this._httpClient.get(_url);
   }
 
