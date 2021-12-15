@@ -65,13 +65,19 @@ export class UsersLoginComponent implements OnInit {
     return this.gUserPasswordValid || this.gUsernameValid;
   }
 
+  // Method for put in the method .then at moment Login by email or Google
+  private thenLogin(){
+    this._toastr.success('The User Auth OK!', 'SpotyAPP');
+    this._authService.postTokenSpotify();
+    this._router.navigate(['/home']);
+  }
+
   // Method Login
   public onLogin(){
     this._UserAuth = this._LoginForm.value;
     this._authService.LoginWithEmail(this._UserAuth)
     .then(() =>{
-      this._toastr.success('The User Auth OK!', 'SpotyAPP');
-      this._router.navigate(['/home']);
+      this.thenLogin();
     })
     .catch(_error =>{
       this._toastr.error(`An error has occurred: ${_error}`, "Error");
@@ -81,7 +87,10 @@ export class UsersLoginComponent implements OnInit {
   // Method LoginAuthGoogle
   public LoginAuth(){
     this._authService.LoginGoogle().then(() => {
-      this._router.navigate(['/home']);
+      this.thenLogin();
+    })
+    .catch(_error =>{
+      this._toastr.error(`An error has occurred: ${_error}`, "Error");
     });
   }
 

@@ -20,7 +20,7 @@ export class AuthGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
     let _token = sessionStorage.getItem('token');
-    if (!_token) {
+    if (_token) {
       this._toastr.warning('You are not logged into the system...', 'SpotyAPP');
       this._router.navigate(['user/login']);
       return false;

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
-        <a class="navbar-brand" title="Angular + Firebase" [routerLink]="['']">
+        <a class="navbar-brand" title="Angular + Firebase" [routerLink]="['/home']">
             <img src="./../../../../assets/icons/Angular.ico" />
             <i class="fas fa-plus text-white"></i>
             <img src="./../../../../assets/icons/Firebase.ico" />
@@ -12,8 +12,16 @@
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-white" routerLinkActive="active" title="Home" [routerLink]="['']"><i
+                    <a class="nav-link text-white" routerLinkActive="active" title="Home" [routerLink]="['/home']"><i
                             class="fas fa-home"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" routerLinkActive="active" title="Releases" [routerLink]="['/home/main']"> Releases
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" routerLinkActive="active" title="Artist" [routerLink]="['/home/artist']"> Artist
                     </a>
                 </li>
             </ul>
