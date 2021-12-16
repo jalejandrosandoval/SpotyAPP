@@ -10,12 +10,10 @@ import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthGuard } from './Guards/Auth/auth.guard';
-import { LoadingComponent } from './Components/Shared/loading/loading.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LoadingComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
