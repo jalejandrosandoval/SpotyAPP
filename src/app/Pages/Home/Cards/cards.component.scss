@@ -1,0 +1,28 @@
+.BodyCard.card.mb-4 {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.CardAlbums.card.h-100{
+    background-color: transparent !important;
+    border: none !important;
+}
+
+img.card-img-top {
+    border-radius: 3% !important;
+}
+
+
+@media (min-width: 1400px) { 
+    .col-xl-3 {
+        flex: 0 0 auto;
+        width: 20%;
+    }
+}
+
+@media (min-width: 1800px) { 
+    .col-xl-3 {
+        flex: 0 0 auto;
+        width: 12.5%;
+    }
+}

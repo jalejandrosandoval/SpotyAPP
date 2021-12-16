@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { IAlbums } from 'src/app/Interfaces/Albums.interface';
 
 @Component({
   selector: 'app-cards',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardsComponent implements OnInit {
 
-  constructor() { }
+  // Variables Initialization
+  @Input() albums: IAlbums[] = [];
+
+  constructor(private _router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  // Method for see the artist in the album X.
+  public lookArtist(_album: IAlbums){
+    let fisrtArtistId = _album.artists[0].id;
+    this._router.navigate(['home/artist', fisrtArtistId]);
   }
 
 }

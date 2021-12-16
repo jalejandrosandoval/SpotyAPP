@@ -1,1 +1,5 @@
-<p>main works!</p>
+<app-loading *ngIf="_loading"></app-loading>
+
+<div class="d-flex flex-wrap justify-content-center justify-content-md-start mt-2">
+  <app-cards [albums]="newAlbums"> </app-cards>
+</div>

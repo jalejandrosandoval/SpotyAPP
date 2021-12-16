@@ -14,6 +14,8 @@ import { SearchComponent } from './Search/search.component';
 import { SpotifyService } from 'src/app/Services/Spotify/spotify.service';
 import { AuthInterceptor } from 'src/app/Interceptors/Auth/auth.interceptor';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { LoadingModule } from 'src/app/Components/Shared/loading/loading.module';
+import { PipesModule } from 'src/app/Pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     NavBarModule,
     FooterModule,
     UsersModule,
-    FooterModule
+    FooterModule,
+    LoadingModule,
+    PipesModule
   ],
   providers: [
     AuthService,
