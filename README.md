@@ -36,6 +36,8 @@ Carpeta donde se encuentra el proyecto de clase de Angular.
          │  └─ Users
          │     ├─ Users-Login
          │     └─ Users-Register
+         ├─ Pipes
+         │  └─ NoImages
          └─ Services
             └─ Auth
 ```
