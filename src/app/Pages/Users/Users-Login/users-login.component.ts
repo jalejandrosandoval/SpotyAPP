@@ -14,7 +14,6 @@ export class UsersLoginComponent implements OnInit {
 
   // Variables Initialization
   public _LoginForm: FormGroup = new FormGroup({});
-  
   private _UserAuth = {} as IUserAuth;
   private isEmail = /\S+@\S+\.\S+/;
 

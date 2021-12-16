@@ -1,12 +1,12 @@
 <form [formGroup]="_LoginForm" (ngSubmit)="onLogin()">
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center text-white">
             <div class="col-xl-10 col-lg-12 col-md-8">
-                <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="cardLog card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
                         <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block pt-3">
-                                <img src="../../../../assets/img/bg_login.png" class="img-fluid mx-auto d-block mt-4"
+                            <div class="col-lg-6 d-none d-lg-block">
+                                <img src="../../../../assets/img/bg_login.svg" class="img-fluid mx-auto d-block mt-4"
                                     alt="Responsive image" />
                             </div>
                             <div class="col-lg-6">
@@ -22,14 +22,14 @@
                                     <h6 class="h6 mb-0 text-center">
                                         <p class="text-center">Ingrese sus Datos de Acesso</p>
                                     </h6>
-                                    <small class="m-0 font-weight-bold text-danger" *ngIf="gLoginFormValid">
+                                    <small class="m-0 font-weight-bold text-warning" *ngIf="gLoginFormValid">
                                         <i class="fas fa-info-circle"> </i> The Field with (*) are required...
                                     </small>
                                     <div class="input-group mb-2 m-0 row">
                                         <input class="form-control form-control-user" type="text"
                                             placeholder="Username@username.com..." title="Username"
                                             formControlName="Username" required />
-                                        <small *ngIf="gUsernameValid" class="text-danger">
+                                        <small *ngIf="gUsernameValid" class="text-warning">
                                             <b>* Field Required: </b> Username Required!
                                         </small>
                                     </div>
@@ -37,7 +37,7 @@
                                         <input class="form-control form-control-user" type="password"
                                             placeholder="Password..." title="Password" formControlName="UserPassword"
                                             required />
-                                        <small *ngIf="gUserPasswordValid" class="text-danger">
+                                        <small *ngIf="gUserPasswordValid" class="text-warning">
                                             <b>* Field Required: </b> Password Required!
                                         </small>
                                     </div>
