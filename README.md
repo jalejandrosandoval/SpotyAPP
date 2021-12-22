@@ -37,9 +37,11 @@ Carpeta donde se encuentra el proyecto de clase de Angular.
          │     ├─ Users-Login
          │     └─ Users-Register
          ├─ Pipes
+         │  ├─ DomSafe
          │  └─ NoImages
          └─ Services
-            └─ Auth
+            ├─ Auth
+            └─ Spotify
 ```
 
 ## Requisitos Previos Para Angular
