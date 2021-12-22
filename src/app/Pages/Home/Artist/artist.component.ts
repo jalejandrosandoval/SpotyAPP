@@ -65,6 +65,7 @@ export class ArtistComponent implements OnInit {
       {
         next: (_res) =>{
           this._topTracks = _res;
+          console.log(_res);
           this._loading = false;
         },
         error: ({ error }: HttpErrorResponse) => {

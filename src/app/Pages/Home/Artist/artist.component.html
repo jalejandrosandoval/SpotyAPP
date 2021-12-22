@@ -41,7 +41,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row pt-4">
         <div class="table-responsive">
             <table class="table table-hover">
                 <thead class="table text-white">
@@ -60,7 +60,11 @@
                             <img [src]="_topTrack.album.images | noImages" class="img-thumb" />
                         </td>
                         <td class="text-td text-center"> {{ _topTrack.album.name }}</td>
-                        <td class="text-td text-center"> {{ _topTrack.name }}</td>
+                        <td class="text-td text-center"> {{ _topTrack.name }}
+                            <div>
+                                <span class="text-white" *ngFor="let artist of _topTrack.artists">{{ artist.name }}. </span>
+                            </div>
+                        </td>
                         <td>
                             <iframe [src]="_topTrack.uri | DomSafe" width="300" height="80" frameBorder="0"
                                 allowtransparency="true" allow="encrypted-media"> </iframe>
