@@ -13,6 +13,7 @@ export const environment = {
     URL:{
       API_URL_Spotify: "https://api.spotify.com/v1/",
       URL_Spotify_Token: "https://accounts.spotify.com/api/token",
+      DomSafe: "https://open.spotify.com/embed?uri="
     },
     Grand_Type: "client_credentials",
     Client_Id: "caea826c5aea4094b6f72b0f3b3c1508",
