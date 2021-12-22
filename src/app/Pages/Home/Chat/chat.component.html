@@ -1,0 +1,19 @@
+<app-loading *ngIf="_loading"></app-loading>
+
+<h1>Chat</h1>
+<hr />
+
+<div class="app-messages" id="app-messages">
+  <div *ngFor="let chat of _messagesChat" [ngClass]="{ 'text-end': _serviceAuth._User.UId == chat.UId }">
+    <span class="badge"
+      [ngClass]="{ 'bg-primary' : _serviceAuth._User.UId == chat.UId, 'bg-success': _serviceAuth._User.UId != chat.UId }">
+      {{ chat.Name }}
+    </span>
+    <p>
+      {{ chat.Message }}
+    </p>
+  </div>
+</div>
+
+<input type="text" class="form-control" [(ngModel)]="_message" (keyup.enter)="sendMessage()"
+  placeholder="Enviar mensaje" />

@@ -4,6 +4,7 @@ import { ArtistComponent } from './Artist/artist.component';
 import { MainComponent } from './Main/main.component';
 import { SearchComponent } from './Search/search.component';
 import { HomeComponent } from './Home/home.component';
+import { ChatComponent } from './Chat/chat.component';
 
 const routes: Routes = [
   {
@@ -12,7 +13,8 @@ const routes: Routes = [
     children: [
       { path: 'main', component: MainComponent },
       { path: 'search', component: SearchComponent },
-      { path: 'artist/:id', component: ArtistComponent }
+      { path: 'artist/:id', component: ArtistComponent },
+      { path: 'chat', component: ChatComponent }
     ]
   }
 ];
