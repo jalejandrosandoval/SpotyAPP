@@ -17,18 +17,21 @@
                                     <h2 class="card-title text-white m-0">
                                         <b> {{ _artists.name }}</b>
                                     </h2>
-                                    <p>
-                                        <a class="text-white" [href]="_artists?.external_urls?.spotify" target="_blank"
-                                            title="Ir a la página del artista...">
-                                            Ir a la página del artista
-                                        </a>
-                                    </p>
-                                    <!--<p class="card-text">
-                                        <span *ngFor="let artist of _album.artists"
-                                            class="badge rounded-pill bg-primary">
-                                            {{ artist.name }}
+                                    <div class="text-white">
+                                        <span class="spanGenres" *ngFor="let genres of _artists.genres">
+                                            <span class="rounded-pill" >
+                                                {{ genres | Capitalize }}
+                                            </span>
                                         </span>
-                                    </p>-->
+                                        <p>
+                                            <span class="text-white">Seguidores: {{ _followers }}</span>
+                                            <br/>
+                                            <a class="text-white" [href]="_artists?.external_urls?.spotify" target="_blank"
+                                                title="Ir a la página del artista...">
+                                                <i class="fab fa-spotify text-success"></i> <b> Spotify </b>
+                                            </a>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

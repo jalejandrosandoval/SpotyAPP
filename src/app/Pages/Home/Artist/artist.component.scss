@@ -10,7 +10,7 @@
 
 img.card-img-top {
     border-radius: 3% !important;
-    height: 520px;
+    height: 580px;
     object-fit: cover;
     filter: brightness(80%);
 }
@@ -30,6 +30,19 @@ a.text-white{
 
 i.fas.fa-chevron-circle-left {
     opacity: 0.5;
+}
+
+span.text-white {
+    opacity: 0.7;
+}
+
+span.rounded-pill {
+    background-color: darkgray;
+    opacity: 0.7;
+}
+
+span.spanGenres {
+    padding-right: 5px;
 }
 
 .img-thumb {
@@ -67,7 +80,7 @@ tr.text-white {
 
 @media (max-width: 1000px) { 
     img.card-img-top {
-        height: 320px;
+        height: 380px;
     }
 
     .CardImg.col-12 {
@@ -77,7 +90,7 @@ tr.text-white {
 
 @media (max-width: 1200px) { 
     img.card-img-top {
-        height: 320px;
+        height: 380px;
     }
 
     .CardImg.col-12 {
@@ -87,7 +100,7 @@ tr.text-white {
 
 @media (max-width: 1400px) { 
     img.card-img-top {
-        height: 420px;
+        height: 480px;
     }
 
     .CardImg.col-12 {

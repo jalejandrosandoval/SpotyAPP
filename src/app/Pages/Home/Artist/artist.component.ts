@@ -18,6 +18,7 @@ export class ArtistComponent implements OnInit {
   public _artists: IArtists = {} as IArtists;
   public _topTracks: ITopTracks = {} as ITopTracks;
   public _loading: boolean;
+  public _followers: any;
 
   constructor(private _router: ActivatedRoute,
     private _spotifyService: SpotifyService,
@@ -29,6 +30,7 @@ export class ArtistComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Method for get the params from route.
   private route(){
     this._router.params.subscribe(
       params => {
@@ -38,12 +40,14 @@ export class ArtistComponent implements OnInit {
     )
   }
 
+  // Get the artist by Id.
   public getArtist(_Id: string){
     this._loading = true;
     this._spotifyService.getArtist(_Id).subscribe(
       {
         next: (_res) =>{
           this._artists = _res;
+          this._followers = _res.followers.total;
           this._loading = false;
         },
         error: ({ error }: HttpErrorResponse) => {
@@ -54,6 +58,7 @@ export class ArtistComponent implements OnInit {
     );
   }
 
+  // GetTopTracks of a artist by Id.
   public getTopTracks(_Id: string){
     this._loading = true;
     this._spotifyService.getTopTracks(_Id).subscribe(
