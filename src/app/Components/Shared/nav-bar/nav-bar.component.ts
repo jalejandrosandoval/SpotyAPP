@@ -23,6 +23,7 @@ export class NavBarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Method for logout session
   public Logout(){
     this._authService.Logout().then(
       () =>{
@@ -31,5 +32,11 @@ export class NavBarComponent implements OnInit {
       }
     );
   }
+
+  // Method to find album from any term. 
+  public searchAlbum(term: string){
+    this._router.navigate(['/home/search', term]);
+  }
+
 
 }

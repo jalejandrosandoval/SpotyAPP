@@ -27,8 +27,8 @@
                 </li>
             </ul>
             <form class="d-flex">
-                <input class="form-control me-sm-2" type="text" placeholder="Search...">
-                <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+                <input class="form-control me-sm-2" type="text" placeholder="Search..." #searchText>
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit" (click)="searchAlbum(searchText.value)"><i class="fas fa-search"></i></button>
             </form>
             <div class="btnlogout form-inline text-white" *ngIf="_User">
                 <div class="collapse navbar-collapse">
